@@ -1,8 +1,9 @@
 "use strict";
 
-var LottoSOAP = require('./lib/lottoSOAP');
+var Lotto = require('./lib/lotto');
+var LottoStat = require('./lib/lottoStatistics');
 
-var lala = new LottoSOAP();
+
 
 // var result = {}; var methodName = '/getLastWyniki'; var data = {     "date":
 // "2017-01-01" }; var success = (response) => {     this.result = response; };
@@ -10,13 +11,13 @@ var lala = new LottoSOAP();
 // lala.sendEnvelope(methodName, data, success, error);
 
 var data = [];
-var callback = function(data){
-  console.log(data);
+const date = "01-01-2017";
+var callback = function (data) {
+  console.log('Loaded ' + data.length + ' elements.')
+  LottoStat.printToLogMostRepeatingNumbers(data);
   process.exit();
 }
 
-lala.getAllWynikiLottoFromDate("01-01-2017",data,callback);
+Lotto.processWynikiLottoFromDate(date, callback);
 
-//async.parallel()
-
-//process.exit();
+//async.parallel() process.exit();
