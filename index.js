@@ -1,6 +1,6 @@
 "use strict";
 
-var async = require('async');
+
 // var appjs = require('appjs'); var http = require('http'); var XMLHttpRequest
 // = require("xmlhttprequest").XMLHttpRequest;
 var LottoSOAP = require('./lib/lottoSOAP');
