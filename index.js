@@ -13,8 +13,9 @@ var LottoStat = require('./lib/lottoStatistics');
 var data = [];
 const date = "01-01-2017";
 var callback = function (data) {
-  console.log('Loaded ' + data.length + ' elements.')
+  console.log('Loaded ' + data.length + ' draws from date "' + date +'"');
   LottoStat.printToLogMostRepeatingNumbers(data);
+  //LottoStat.printToLogNiceChartToLog(data);
   process.exit();
 }
 
